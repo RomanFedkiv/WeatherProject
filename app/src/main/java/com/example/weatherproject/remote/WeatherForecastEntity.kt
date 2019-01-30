@@ -7,7 +7,7 @@ data class WeatherForecastEntityRemote(
     @SerializedName("list") val weatherList : List<WeatherListRemote>,
     @SerializedName("city") val city : CityRemote)
 
-data class CityRemote (val name : String)
+data class CityRemote (val name : String?)
 
 data class WeatherListRemote(
     @SerializedName("dt_txt") val time : String,

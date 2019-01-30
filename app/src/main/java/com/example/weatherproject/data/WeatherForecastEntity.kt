@@ -8,7 +8,7 @@ import com.example.weatherproject.cache.WeatherForecastDao
 data class WeatherForecastEntity(
     @PrimaryKey(autoGenerate = true)
     var id : Int = 0,
-    val city : String,
+    val city : String?,
     val weatherTempList : List<WeatherTempEntity>
 )
 

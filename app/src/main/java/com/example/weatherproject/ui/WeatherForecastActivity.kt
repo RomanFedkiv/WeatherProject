@@ -42,7 +42,8 @@ class WeatherForecastActivity : AppCompatActivity(){
         { t ->
             if (t!=null) {
                 progressBar.visibility = View.INVISIBLE
-                cityTextView.text = t.city
+                if (t.city != null) cityTextView.text = t.city
+                else cityTextView.text = "Unknown Place"
                 tempNowTextView.text = t.weatherTempList.get(0).temp.toString() + "°"
                 (weatherRecyclerView.adapter as WeatherForecastAdapter).updateList(t.weatherTempList)
             }
